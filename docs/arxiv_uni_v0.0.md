@@ -14,12 +14,13 @@
 [Tianjiao Li](https://scholar.google.com/citations?hl=zh-CN&user=so6xMg8AAAAJ)<sup>3</sup>,
 [Mengping Yang](https://scholar.google.com/citations?user=yF34LtcAAAAJ&hl=zh-CN&oi=ao)<sup>1</sup>,
 [Xiaomeng Yang](https://scholar.google.com/citations?hl=zh-CN&user=7evPWQYAAAAJ)<sup>1</sup>,
+[Chao Qu](https://scholar.google.com/citations?hl=en&user=DI2NyPsAAAAJ)<sup>4</sup>,
 [Zhiyu Tan](https://github.com/SAIS-FUXI)<sup>1,2</sup><sup>+#</sup>,
 [Hao Li](https://scholar.google.com/citations?user=pHN-QIwAAAAJ&hl=zh-CN)<sup>1,2</sup><sup>#</sup>,
 
 \* equal contribution + project leader # Corresponding author 
 
-<sup>1</sup>Shanghai Academy of AI for Science, <sup>2</sup>Fudan University, <sup>3</sup>Nanyang Technological University
+<sup>1</sup>Shanghai Academy of AI for Science, <sup>2</sup>Fudan University, <sup>3</sup>Nanyang Technological University, <sup>4</sup>INFTech
 
 ## Overview
 Chain-of-Thought (CoT) reasoning has significantly enhanced LLM performance on complex text tasks by encouraging interpretable, step-by-step problem solving. However, extending this paradigm to multimodal tasks presents new challenges. In vision-language scenarios, human cognition depends on understanding how visual states evolve over time, inferring causality and planning based on object movements, spatial interactions, and transformations, which are critical for physical reasoning, visual planning, and story comprehension.
@@ -28,7 +29,7 @@ To bridge this gap, we introduce the Unified Chain-of-Thought (Uni-CoT) framewor
 Specifically, the Uni-CoT reasoning pipeline consists of four key components:
 1. **Planning**: Decompose the complex task into a sequence of simpler, manageable subtasks.
 2. **Subtask Execution**: Execute each subtask using the unified model with step-by-step reasoning.
-3. **Self-Check**: After completing each subtask, perform a validation check to ensure the intermediate result aligns with the intended goal.
+3. **Self-Reflection**: After completing each subtask, perform a validation check to ensure the intermediate result aligns with the intended goal.
 4. **Final Result**: Aggregate the validated subtask results to generate the final output.
 
 With these designs, our Uni-CoT framework aims to enable unified large models to tackle a wide range of challenging multimodal applications, including:
@@ -38,7 +39,7 @@ With these designs, our Uni-CoT framework aims to enable unified large models to
 
 
 <p align="center">
-  <img src="../assets/pipeline.png" width="900"/>
+  <img src="../assets/teaser.png" width="900"/>
 </p>
 
 ---
